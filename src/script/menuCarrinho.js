@@ -16,7 +16,7 @@ function irParaCheckout() {
 	if (Object.keys(idsProdutoCarrinhoComQuantidade).length === 0) {
 		return;
 	}
-	window.location.href = window.location.origin + "/checkout.html";
+	window.location.href = "./checkout.html";
 }
 
 export function inicializarCarrinho() {
@@ -78,7 +78,7 @@ function desenharProdutoNoCarrinho(idProduto) {
 			<i	class="fa-solid fa-circle-xmark text-slate-900 hover:text-slate-700"></i>
 		</button>  
 		<img
-			src="./assets/img/product-${produto.id}.jpg"
+			src="./public/assets/img/product-${produto.id}.jpg"
 			alt="Carrinho: ${produto.nome}"
 			class="h-24 rounded-lg"
 		/>

@@ -94,6 +94,7 @@ export function desenharProdutoCarrinhoSimples(
 		"bg-stone-200",
 		"rounded-lg",
 		"relative",
+		"w-96",
 	];
 
 	for (const articleClass of articleClasses) {
@@ -101,7 +102,7 @@ export function desenharProdutoCarrinhoSimples(
 	}
 
 	const cartaoProdutoCarrinho = `<img
-			src="./assets/img/product-${produto.id}.jpg"
+			src="./public/assets/img/product-${produto.id}.jpg"
 			alt="Carrinho: ${produto.nome}"
 			class="h-24 rounded-lg"
 		/>

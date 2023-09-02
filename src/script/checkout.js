@@ -7,6 +7,7 @@ import {
 
 function desenharProdutosCheckout() {
 	const idsProdutoCarrinhoComQuantidade = lerLocalStorage("carrinho") ?? {};
+
 	for (const idProduto in idsProdutoCarrinhoComQuantidade) {
 		desenharProdutoCarrinhoSimples(
 			idProduto,
@@ -33,7 +34,7 @@ function finalizarCompra(evento) {
 
 	salvarLocalStorage("historico", historicoPedidosAtualizado);
 	apagarDoLocalStorage("carrinho");
-	window.location.href = window.location.origin + "/pedidos.html";
+	window.location.href = "./pedidos.html";
 }
 
 desenharProdutosCheckout();
