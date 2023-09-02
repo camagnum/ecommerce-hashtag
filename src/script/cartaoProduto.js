@@ -8,7 +8,7 @@ export function renderizarCatalogo() {
 			produto.feminino ? "feminino" : "masculino"
 		}">
         <img
-            src="../../assets/img/${produto.nomeArquivoImagem}"
+            src="./assets/img/${produto.nomeArquivoImagem}"
             alt="Produto ${produto.id} do Magazine Hashtag"
             class="group-hover:scale-110 duration-300 my-3 rounded-lg"
         />
