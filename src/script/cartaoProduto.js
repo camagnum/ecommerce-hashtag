@@ -4,7 +4,9 @@ import { adicionarAoCarrinho } from "./menuCarrinho";
 export function renderizarCatalogo() {
 	for (const produto of catalogo) {
 		const cartaoProduto = `<div id="card-produto-${produto.id}"
-		class="hover:cursor-pointer w-48 flex flex-col p-2 justify-between shadow-xl shadow-slate-400 rounded-lg group">
+		class="hover:cursor-pointer w-48 flex flex-col p-2 justify-between shadow-xl shadow-slate-400 rounded-lg group ${
+			produto.feminino ? "feminino" : "masculino"
+		}">
         <img
             src="./assets/img/${produto.nomeArquivoImagem}"
             alt="Produto ${produto.id} do Magazine Hashtag"
@@ -13,7 +15,9 @@ export function renderizarCatalogo() {
         <p class="text.sm">${produto.marca}</p>
         <p class="text.sm">${produto.nome}</p>
         <p class="text.sm">$${produto.preco}</p>
-        <button id="adicionar-${produto.id}" class="bg-slate-950 text-slate-200 hover:scale-105 hover:bg-slate-700">
+        <button id="adicionar-${
+			produto.id
+		}" class="bg-slate-950 text-slate-200 hover:scale-105 hover:bg-slate-700">
             <i class="fa-solid fa-cart-plus"></i>
         </button>
     </div>`;
@@ -24,6 +28,6 @@ export function renderizarCatalogo() {
 	for (const produto of catalogo) {
 		document
 			.getElementById(`adicionar-${produto.id}`)
-			.addEventListener("click",() => adicionarAoCarrinho(produto.id));
+			.addEventListener("click", () => adicionarAoCarrinho(produto.id));
 	}
 }
