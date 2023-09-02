@@ -102,7 +102,7 @@ export function desenharProdutoCarrinhoSimples(
 	}
 
 	const cartaoProdutoCarrinho = `<img
-			src="./assets/img/product-${produto.id}.jpg"
+			src="../../assets/img/product-${produto.id}.jpg"
 			alt="Carrinho: ${produto.nome}"
 			class="h-24 rounded-lg"
 		/>
